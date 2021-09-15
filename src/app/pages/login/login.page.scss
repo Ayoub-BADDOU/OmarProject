@@ -1,0 +1,53 @@
+// logo + title
+.cssLogo{
+    width: 200px; height: auto;
+    display: block;
+    margin: 0px auto;
+    margin-top: 60px;
+}
+.cssTitle{
+    margin: 0px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    top: -20px;
+}
+
+// label + inputs
+.cssForm{ 
+    width: 300px;
+    margin: 30px auto;
+}
+
+.cssLabel{
+    font-size: 18px;
+    color: #fff;
+}
+
+.cssInput{
+    height: 60px; width: 300px;
+    margin: 12px 0px;
+    --background: #fff !important;
+    border-radius: 6px;
+}
+
+// btn de connexion
+.cssBtn{
+    height: 60px; width: 300px;
+    font-size: 30px;
+    --background: #fff !important;
+    border-radius: 6px;
+    border: none;
+}
+
+// eye password
+.icon-login{
+    position: absolute;
+    left: 10px; top: 60px;
+    margin-right: 10px;
+    font-size: 24px;
+    color: brown;
+    z-index: 10000;
+  }

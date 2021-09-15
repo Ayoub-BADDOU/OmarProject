@@ -1,0 +1,83 @@
+ion-slides {
+    height: 100%;
+}
+
+
+ion-grid{
+    height: 100%;
+}
+
+// logo + title
+.cssLogo{
+    width: 100px; height: auto;
+    display: block;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+.cssTitle{
+    margin: 0px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    top: -10px;
+}
+
+// label + inputs
+.cssForm{
+    width: 300px;
+    margin: 30px auto;
+    margin-top: 20px;
+}
+
+.cssGender{
+ width: 80px;
+ border: 2px solid #fff;
+ border-radius: 10px;
+ margin-bottom: 8px;
+ position: relative;
+ left: -30px;
+ cursor: pointer;
+}
+.cssGender img{
+    width: 70px;
+    position: relative;
+    top: 5px;
+    z-index: -100000;
+}
+
+ion-col{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.cssToRight{
+    text-align: start;
+}
+.cssLabel{
+    font-size: 16px;
+    color: #fff;
+    text-align: right !important;
+}
+
+.cssInput{
+    height: 40px; width: 300px;
+    margin: 6px 0px;
+    font-size: 16px !important;
+    --background: #fff !important;
+    border-radius: 6px;
+}
+
+// btn de connexion
+.cssBtn{
+    height: 40px; width: 300px;
+    font-size: 20px;
+    --background: #fff !important;
+    border-radius: 6px;
+    border: none;
+    position: relative; left: 3px;
+}
+
+
+

@@ -1,0 +1,71 @@
+.cssCard{
+    display: flex;
+    width: 92% !important;
+    height: 150px !important;
+    margin: 5px auto;
+    margin-top: 6px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+.cssImg{
+    width: 35%;
+    background-color: #fff;
+}
+.cssImg img{
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 17px auto;
+}
+
+.cssCard .cssHeaderCard{
+    width: 65%;
+    padding: 8px 6px;
+    background-color: #DC4E41 !important;
+    
+}
+.cssCard .cssTitleCrd{
+    color: #fff !important;
+    font-size: 18px;
+}
+
+.cssPrixInitial{
+    margin: 8px 0px 6px 0px;
+    font-size: 16px;
+    color: #fff;
+}
+.cssPrixInitial span{
+    font-size: 24px;
+}
+.cssPrixFinal{
+    margin: 0px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #fff;
+}
+.cssPrixFinal span:first-child{
+    font-size: 16px;
+    text-decoration: line-through;
+}
+.cssRecduction{
+    text-decoration: none;
+    margin: 0px 5px;
+    padding: 0px 4px;
+    padding-top: 1px;
+    // padding: 0px 3px;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    color: #DC4E41;
+    font-size: 16px;
+    // position: relative;
+    // top: 2px;
+}
+
+ion-button{
+    width: 70% !important;
+    margin: 5px 0px !important;
+    --color: #DC4E41;
+    font-size: 17px;
+    --background: #fff !important;
+    border-radius: 10px;
+}

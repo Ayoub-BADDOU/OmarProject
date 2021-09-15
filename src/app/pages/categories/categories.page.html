@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="cssHeader bgheader">
+
+    <ion-title class="tajawal-Bold cssTitleHead">
+      <span class="cssBtnHeader" (click)="showMenu()">
+        <fa-icon icon="ellipsis-v"></fa-icon>
+      </span>
+      الفئات
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bgInterface2">
+  <ion-grid>
+
+    <!-- Menu -->
+    <div class="cssMenu animate__animated animate__fadeInDown animate__delay-0s" *ngIf="isShow">
+      <ion-list class="ion-no-padding">
+        <ion-item lines="none">
+          <label class="almarai-bold" routerLink="/vendeur-demandehistorique">طلبياتي السابقة</label>
+        </ion-item>
+        <ion-item lines="none">
+          <label class="almarai-bold" routerLink="/login">خروج</label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <ion-row>
+      <ion-col size="6" *ngFor="let d of data" routerLink="/products">
+        <ion-card class="cssCard">
+          <img [src]="d.ref" draggable="false" />
+          <ion-card-header class="cssHeaderCard">
+            <ion-card-title class="cssTitleCrd tajawal-Medium">{{d.category}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

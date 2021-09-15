@@ -1,0 +1,126 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="cssHeader bgheader">
+
+    <ion-title class="tajawal-Bold cssTitleHead">
+      <span class="cssBtnHeaderLeft" routerLink="/products">
+        <fa-icon icon="arrow-left"></fa-icon>
+      </span>
+      طلبياتي
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bgInterface2">
+  <ion-grid class="ion-no-padding">
+    <div class="cssHeight">
+      <!-- <ion-row *ngFor="let d of data; let i = index;"
+        class="animate__animated animate__bounceInLeft animate__delay-{{i}}s"> -->
+      <ion-row *ngFor="let d of data">
+        <ion-col class="ion-no-padding">
+
+          <div class="cssProduct">
+            <div class="cssImg">
+              <img [src]="d.img" alt="@youb">
+            </div>
+            <div class="cssInfos">
+              <p>
+                <span class="cssLibel tajawal-Boldd">كود المنتج :</span>
+                <span class="cssValue tajawal-Medium cssNumber">{{d.codeProduit}}</span>
+              </p>
+              <p>
+                <span class="cssLibel tajawal-Boldd">فئة المنتج :</span>
+                <span class="cssValue tajawal-Medium">{{d.category}}</span>
+              </p>
+              <p>
+                <span class="cssLibel tajawal-Boldd">الكمية :</span>
+                <span class="cssValue tajawal-Medium cssNumber">{{d.qte}}</span>
+              </p>
+              <p>
+                <span class="cssLibel tajawal-Boldd">ثمن الوحدة :</span>
+                <span class="cssValue tajawal-Medium cssNumber">{{(d.prixUnitaire).toFixed(2)}}</span> درهم
+              </p>
+            </div>
+          </div>
+
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+
+
+    <ion-row>
+      <ion-col>
+        <div class="cssSomme">
+          <div class="cssLibele tajawal-Boldd">المجموع</div>
+          <div class="prixTotal tajawal-Boldd">{{(total).toFixed(2)}} درهم</div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="tajawal-Boldd animate__animated animate__zoomIn animate__delay-1s" (click)="sendProducts()">
+          طلب المنتوجات
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+  <!-- alert error && success -->
+  <div class="alerte" *ngIf="showSuccessAlerte">
+    <div class="box2">
+      <div class="successImg">
+        <img src="../../../assets/images/successAlert1.gif" alt="@youb" draggable="false">
+      </div>
+      <div class="message">
+        <p class="message_content tajawal-Medium">
+          عملية إرسال الطلبية قد تمت بنجاح
+        </p>
+        <div class="message_btn">
+          <button routerLink="/categories" class="tajawal-Medium">رجوع</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="alerte" *ngIf="showErrorAlerte">
+    <div class="box2">
+      <div class="successImg">
+        <img src="../../../assets/images/errorAlert1.gif" alt="@youb" draggable="false">
+      </div>
+      <div class="message">
+        <p id="koho" class="message_content tajawal-Medium">
+          فشل في محاولة التسجيل. المرجو منك إعادة العملية.
+        </p>
+        <div class="message_btn_Err">
+          <button class="tajawal-Medium">إعادة المحاولة</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</ion-content>
+
+<!-- <ion-content class="bgInterface2">
+  <ion-grid class="ion-no-padding">
+
+    <ion-row>
+      <ion-col>
+        <div class="cssSomme">
+          <div class="cssLibele tajawal-Boldd">المجموع</div>
+          <div class="prixTotal tajawal-Boldd">{{(total).toFixed(2)}} درهم</div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="tajawal-Boldd" (click)="sendProducts()">طلب المنتوجات</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content> -->

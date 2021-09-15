@@ -1,0 +1,56 @@
+// logo
+.cssLogo{
+    width: 100px; height: auto;
+    display: block;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+// card
+ion-card{
+    width: 360px; height: 160px;
+    margin: 10px auto;
+}
+ion-card-header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cssCardTitle{
+    margin: 0px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.cssTiers{
+    display: flex;
+    justify-content: space-between;
+}
+.cssBtn{
+    width: 140px; height: 100px;
+    background-color: #BE1720;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.cssBtn1{
+    background-color: #EF344B;
+}
+
+.cssBtn img{
+    height: 40px; width: auto;
+    display: block;
+    margin: 8px auto;
+    margin-bottom: 4px;
+}
+.cssBtn h5{
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+.cssBtn h3{
+    margin: 8px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}

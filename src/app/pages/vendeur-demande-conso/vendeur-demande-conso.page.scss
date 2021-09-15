@@ -1,0 +1,94 @@
+.cssCard1, .cssCard2{
+    width: 94%;
+    margin: 10px auto;
+    margin-top: 24px;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.cssTitleCard{
+    display: inline;
+    padding: 6px 14px;
+    border: 2px solid #FAFAFA;
+    border-radius: 18px;
+    font-size: 15px;
+    position: relative;
+    top: -20px; left: 14px;
+}
+.cssCard1{background: #FF7848;}
+.cssCard2{background: #0DAFAF;}
+.cssCard1 .cssTitleCard{background: #FF7848;}
+.cssCard2 .cssTitleCard{background: #0DAFAF;}
+
+
+.cssContentCard div{margin-top: 4px;}
+.cssContentCard .cssLibel{
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+.cssContentCard .cssValue{
+    font-size: 17px;
+}
+
+.cssContentCard .cssNum{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cssContentCard .cssNum .cssValue{
+    direction: rtl;
+    font-size: 19px;
+}
+
+.cssContentCard .cssNum .cssBtn{
+    height: 36px !important; 
+    width: 90px !important;
+    font-size: 14px;
+    --background: #fff !important;
+    color: #FF7848;
+    border-radius: 6px;
+    border: none;
+}
+.cssContentCard .cssNum .cssBtn img{
+    width: 22px; height: 22px;
+    margin-right: 8px;
+}
+
+
+// row 2
+.cssFlex{
+    display: flex;
+    justify-content: space-between;
+}
+.cssCard2 .cssValue{
+    font-size: 19px;
+}
+
+// row 3
+.cssBtns{
+    width: 94%;
+    margin: 0px auto;
+    margin-top: 8px;
+}
+.cssBtn2{
+    height: 50px !important;
+    width: 100%;
+    font-size: 20px;
+    --background: #D3D3D3 !important;
+    color: #444;
+    border-radius: 6px;
+    border: none;
+    padding: 0px 5px !important;
+}
+.cssBtn3{
+    height: 50px !important;
+    width: 100%;
+    font-size: 20px;
+    --background: #444 !important;
+    color: #D3D3D3;
+    border-radius: 6px;
+    border: none;
+    padding: 0px 5px !important;
+}

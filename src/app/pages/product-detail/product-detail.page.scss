@@ -1,0 +1,127 @@
+ion-slides {
+    height: 40%;
+    background: #fff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+ion-slides img{
+    width: 100%;
+    height: auto;
+}
+
+// ------- detail infos
+
+// row 1
+ion-button{
+    width: 100% !important;
+    height: 50px !important;
+    margin: 15px 0px !important;
+    --color: #ffffff;
+    font-size: 17px;
+    --background: #DC4E41 !important;
+    border-radius: 10px;
+}
+
+.cssQuantity{
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+    height: 50px !important;
+    background: #DC4E41 !important;
+    border-radius: 4px;
+    margin: 15px 0px !important;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.cssQuantity .cssAddMinus{
+    width: 30%;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 12px 0px;
+    cursor: pointer;
+}
+.cssQuantity .cssQty{
+    width: 40%;
+    font-size: 20px;
+    background: #fff !important;
+    border: 1px solid #DC4E41;
+}
+.cssQuantity .cssQty span{
+    color: #DC4E41;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+// row 2
+.cssCard{
+    margin: 0px auto !important;
+    --background: #FF7848;
+    color: #fff;
+    --padding: 8px auto !important;
+
+}
+.cssContentCard p{
+    padding-top: 5px !important;
+    padding-right: 12px !important;
+    padding-left: 10px !important;
+}
+.cssContentCard p:first-child{
+    padding-top: 10px !important;
+}
+.cssContentCard p:last-child{
+    padding-bottom: 10px !important;
+}
+
+.cssContentCard .cssLibel, .cssContentCard2 .cssLibel{
+    font-size: 17px;
+    margin-left: 8px;
+}
+.cssContentCard .cssValue, .cssContentCard2 .cssValue{
+    font-size: 16px;
+}
+.cssContentCard p:last-child .cssValue{
+    display: block;
+}
+.cssContentCard .cssReduction{
+    position: relative;
+    left: -14px;
+}
+
+// row 3
+.cssCard2{
+    margin: 0px auto !important;
+    --background: #975454 !important;
+    color: #fff;
+    --padding: 8px auto !important;
+}
+.cssContentCard2 p{
+    padding: 5px 12px 0px 10px!important;
+}
+.cssContentCard2 p:first-child{
+    padding-top: 10px !important;
+}
+.cssContentCard2 p:last-child{
+    padding-bottom: 10px !important;
+}
+
+.cssContentCard2 .cssButtonCover{
+    width: 110px;
+    position: absolute;
+    left: 10px; bottom: 20px;
+}
+.cssContentCard2 ion-button{
+    display: inline-block;
+    width: 100% !important;
+    height: 36px !important;
+    margin: 0px !important;
+    --color: #975454;
+    font-size: 16px;
+    --background: #fff !important;
+    border-radius: 4px !important;
+}
+.cssContentCard2 ion-button fa-icon{
+    padding: 0px 8px;
+    font-weight: 900;
+}
