@@ -84,10 +84,10 @@ ion-button{
 .cssContentCard p:last-child .cssValue{
     display: block;
 }
-.cssContentCard .cssReduction{
-    position: relative;
-    left: -14px;
-}
+// .cssContentCard .cssReduction{
+//     position: relative;
+//     left: -14px;
+// }
 
 // row 3
 .cssCard2{
@@ -124,4 +124,89 @@ ion-button{
 .cssContentCard2 ion-button fa-icon{
     padding: 0px 8px;
     font-weight: 900;
+}
+
+// --- last row
+.cssImages{
+    width: 96%;
+    margin: 4px auto;
+}
+.cssImages img{
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 362px) {
+    ion-slides {
+        height: 35%;
+    }
+
+    // row 1
+    ion-button{
+        height: 40px !important;
+        margin: 10px 0px !important;
+        --border-radius: 4px;
+    }
+    .cssQuantity{
+        height: 40px !important;
+        border-radius: 4px;
+        margin: 10px 0px !important;
+    }
+    .cssQuantity .cssAddMinus{
+        font-size: 17px;
+        text-align: center;
+        padding: 7px 0px;
+        cursor: pointer;
+    }
+    .cssQuantity .cssQty{
+        font-size: 18px;
+    }
+    .cssQuantity .cssQty span{
+        font-size: 26px;
+    }
+
+    // row 2
+    .cssCard{
+        --padding: 5px auto !important;
+    }
+    .cssContentCard p:first-child{
+        padding-top: 8px !important;
+    }
+    .cssContentCard p:last-child{
+        padding-bottom: 8px !important;
+    }
+
+    .cssContentCard .cssLibel, .cssContentCard2 .cssLibel{
+        font-size: 13px;
+        margin-left: 8px;
+    }
+    .cssContentCard .cssValue, .cssContentCard2 .cssValue{
+        font-size: 14px;
+    }
+
+    // row 3
+    .cssCard2{
+        --padding: 6px auto !important;
+        --border-radius: 4px !important;
+    }
+    .cssContentCard2 p{
+        padding: 5px 10px 0px 8px!important;
+    }
+
+    .cssContentCard2 p:first-child{
+        padding-top: 10px !important;
+    }
+    .cssContentCard2 p:last-child{
+        padding-bottom: 10px !important;
+    }
+    .cssContentCard2 .cssButtonCover{
+        width: 90px;
+        position: absolute;
+        left: 10px; bottom: 14px;
+    }
+    .cssContentCard2 ion-button{
+        height: 36px !important;
+        font-size: 13px;
+        --border-radius: 4px !important;
+    }
 }

@@ -4,8 +4,8 @@ ion-toolbar:last-child{
 
 .segmentBtn1{
     // height: 28px;
-    --color-activated: #FF7848;
-    --color-checked: #ffb59a;
+    --color-activated: #ffd967;
+    --color-checked: #FB9300;
     position: relative;
     top: -9px;
 }
@@ -25,7 +25,8 @@ ion-toolbar:last-child{
 }
 // -------  section 1
 .cssSection{
-    background: #f8caba;
+    // background: #f8caba;
+    background: #ffd967;
     padding-bottom: 8px;
     min-height: 100vh;
     width: 100%;
@@ -48,7 +49,7 @@ ion-toolbar:last-child{
     margin-top: 12px;
     margin-bottom: 10px;
     padding: 11px 0px;
-    background: #FF7848;
+    background: #FB9300;
     color: #fff;
     font-size: 18px;
     text-align: center;
@@ -94,7 +95,7 @@ ion-toolbar:last-child{
 .cssTotalDay{
     width: 96%;
     margin: 0px auto;
-    background: #FF7848;
+    background: #FB9300;
     color: #fff;
     padding-bottom: 10px;
 }
@@ -211,3 +212,81 @@ ion-toolbar:last-child{
     font-size: 20px;
 }
 
+
+@media only screen and (max-width: 362px) {
+    // --- title
+    .segmentBtn1, .segmentBtn2, .segmentBtn3{
+        font-size: 13px !important;
+    }
+
+    // -------  section 1
+    .cssContainer{ 
+        border-radius: 4px;
+    }
+    // row 1
+    .cssSectionTtile{
+        height: 40px;
+        font-size: 16px;
+        padding: 8px 0px;
+    }
+    // row 2
+    .cssVenteDay .cssinfos{
+        width: 60%;
+    }
+    .cssinfos .cssName{
+        font-size: 13px;
+    }
+    .cssinfos .cssSerial{
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .cssVenteDay .cssCount{
+        width: 40%;
+        font-size: 12px;
+    }
+    .cssCount .cssValue span:first-child{
+        font-size: 17px;
+    }
+    // row 3
+    .cssTitleCard{
+        font-size: 18px;
+    }
+    .cssCard{
+        padding-right: 6px;
+    }
+    .cssCard .cssCol{
+        width: 50%;
+    }
+    .cssCol .cssLibel{
+        font-size: 12px;
+    }
+    .cssCol .cssValue{
+        font-size: 16px;
+    }
+
+    // --------- section 2
+    .cssDate{
+        font-size: 15px !important;
+    }
+    // last row
+    .cssSommeMounth .cssTitleCard{
+        font-size: 19px;
+    }
+    .cssSommeMounth .cssRow .cssLibel{
+        font-size: 13px;
+    }
+    .cssSommeMounth .cssRow .cssBar .cssStart{
+        font-size: 12px;
+    }
+    .cssSommeMounth .cssRow .cssBar .cssEnd{
+        font-size: 12px;
+    }
+
+    // --------- section 3
+    // satyle date
+    .cssSection3 .cssVenteDay .cssName{
+        font-size: 17px;
+    }
+
+}

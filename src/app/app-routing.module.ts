@@ -75,6 +75,10 @@ const routes: Routes = [
     path: 'responsable-my-vend',
     loadChildren: () => import('./pages/responsable-my-vend/responsable-my-vend.module').then( m => m.ResponsableMyVendPageModule)
   },
+  {
+    path: 'responsable-home',
+    loadChildren: () => import('./pages/responsable-home/responsable-home.module').then( m => m.ResponsableHomePageModule)
+  },
 ];
 
 @NgModule({

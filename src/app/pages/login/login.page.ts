@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { MenuController } from "@ionic/angular";
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
   password: any = "";
   identifant: any = "";
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private menu: MenuController) { }
 
   ngOnInit() {
   }
@@ -31,6 +31,13 @@ export class LoginPage implements OnInit {
     }
   }
 
+  ionViewDidEnter() {
+    this.menu.enable(false);
+  }
+
+  ionViewWillLeave() {
+    this.menu.enable(true);
+  }
 
   login() {
 

@@ -1,6 +1,10 @@
+.cssContainer{
+    width: 96%;
+    margin: 0px auto;
+}
 .cssCard{
     display: flex;
-    width: 92% !important;
+    width: 100% !important;
     height: 150px !important;
     margin: 5px auto;
     margin-top: 6px;
@@ -10,17 +14,16 @@
 .cssImg{
     width: 35%;
     background-color: #fff;
+    padding: 5px;
 }
 .cssImg img{
-    width: 80%;
-    height: 80%;
-    display: block;
-    margin: 17px auto;
+    width: 100%;
+    height: 100%;
 }
 
 .cssCard .cssHeaderCard{
     width: 65%;
-    padding: 8px 6px;
+    padding: 6px;
     background-color: #DC4E41 !important;
     
 }
@@ -68,4 +71,43 @@ ion-button{
     font-size: 17px;
     --background: #fff !important;
     border-radius: 10px;
+}
+
+
+
+@media only screen and (max-width: 362px) {
+    .cssCard{
+        height: 120px !important;
+        border-radius: 4px !important;
+    }
+
+    .cssCard .cssTitleCrd{
+        font-size: 15px;
+    }
+    
+    .cssPrixInitial{
+        font-size: 15px;
+    }
+    .cssPrixInitial span{
+        font-size: 20px;
+    }
+    .cssPrixFinal{
+        font-size: 11px;
+        margin-bottom: 2px;
+    }
+    .cssPrixFinal span:first-child{
+        font-size: 14px;
+    }
+    .cssRecduction{
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+
+    ion-button{
+        height: 30px !important;
+        margin-top: 0px;
+        font-size: 15px;
+        --border-radius: 4px !important;
+    }
 }

@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-vendeur-home',
-  templateUrl: './vendeur-home.page.html',
-  styleUrls: ['./vendeur-home.page.scss'],
+  selector: 'app-responsable-home',
+  templateUrl: './responsable-home.page.html',
+  styleUrls: ['./responsable-home.page.scss'],
 })
-export class VendeurHomePage implements OnInit {
-  // etatDemande : V/Validé, A/Attente, R/Refusé
+export class ResponsableHomePage implements OnInit {
+
 
   data = {
     jour: "الخميس",
@@ -60,9 +60,9 @@ export class VendeurHomePage implements OnInit {
   ]
 
 
-  role1 = "V";
-  role2 = "R";
-  user = this.role1 == "V" ? true : false;
+  // role1 = "V";
+  // role2 = "R";
+  // user = this.role1 == "V" ? true : false;
 
   isShow: boolean = false;
   numClickMenu: number = 0;
@@ -73,16 +73,9 @@ export class VendeurHomePage implements OnInit {
   }
 
   ionViewWillEnter() {
-    this.menu.enable(true, 'vendeur-menu')
+    this.menu.enable(true, 'responsable-menu')
   }
   ionViewWillLeave() {
-    this.menu.enable(false, 'vendeur-menu')
-  }
-
-  showMenu() {
-    this.numClickMenu++;
-    this.isShow = this.numClickMenu % 2 == 0 ? false : true;
-    console.log(this.isShow, this.numClickMenu);
-
+    this.menu.enable(false, 'responsable-menu')
   }
 }

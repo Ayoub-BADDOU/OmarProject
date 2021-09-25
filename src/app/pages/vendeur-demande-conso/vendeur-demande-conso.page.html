@@ -34,7 +34,7 @@
             </div>
             <div class="cssNum">
               <div>
-                <span class="cssLibel tajawal-Bold">رقم الهاتف :</span>
+                <span class="cssLibel tajawal-Bold">الهاتف :</span>
                 <span class="cssValue tajawal-Medium">{{data1.numPhone}}</span>
               </div>
               <ion-button class="tajawal-Boldd cssBtn">
@@ -44,7 +44,7 @@
             </div>
             <div class="cssNum">
               <div>
-                <span class="cssLibel tajawal-Bold">رقم الواتساب :</span>
+                <span class="cssLibel tajawal-Bold">الواتساب :</span>
                 <span class="cssValue tajawal-Medium">{{data1.numWhatsapp}}</span>
               </div>
               <ion-button class="tajawal-Boldd cssBtn">
@@ -78,24 +78,21 @@
             <span class="tajawal-Bold">معلومات حول الطلبية</span>
           </div>
           <div class="cssContentCard">
-
             <div>
-              <span class="cssLibel tajawal-Bold">رقم الطلبية :</span>
-              <span class="cssValue tajawal-Medium">{{data2.id}}</span>
+              <span class="cssDate">{{data2.date}}</span>
             </div>
-            <div>
-              <span class="cssLibel tajawal-Bold">تاريخ الطلبية :</span>
-              <span class="cssValue tajawal-Medium">{{data2.date}}</span>
-            </div>
-
-            <div class="cssFlex">
+            <div class="cssCard2Infos">
               <div>
-                <span class="cssLibel tajawal-Bold">المبلغ بالدرهم :</span>
-                <span class="cssValue tajawal-Medium">{{data2.prix}}</span>
+                <p class="cssLibel tajawal-Medium">رقم الطلبية</p>
+                <p class="cssValue">{{data2.id}}</p>
               </div>
               <div>
-                <span class="cssLibel tajawal-Bold">القيمة بالنقط :</span>
-                <span class="cssValue tajawal-Medium">{{data2.note}}</span>
+                <p class="cssLibel tajawal-Medium">المبلغ بالدرهم</p>
+                <p class="cssValue">{{data2.prix}}</p>
+              </div>
+              <div>
+                <p class="cssLibel tajawal-Medium">القيمة بالنقط</p>
+                <p class="cssValue">{{data2.note}}</p>
               </div>
             </div>
           </div>

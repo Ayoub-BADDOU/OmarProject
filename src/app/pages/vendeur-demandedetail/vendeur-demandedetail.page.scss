@@ -42,3 +42,29 @@
 .cssInfos .cssValue{
     font-size: 16px;
 }
+
+@media only screen and (max-width: 362px) {
+    .cssProduct{
+        height: 100px !important;
+    }
+
+    .cssProduct .cssImg{
+        width: 90px;
+        height: 90px;
+        margin-right: 16px;
+    }
+
+    .cssInfos {
+        margin-right: 12px;
+    }
+    .cssInfos p{
+        margin: 0px;
+    }
+    .cssInfos .cssLibel{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    .cssInfos .cssValue{
+        font-size: 14px;
+    }
+}

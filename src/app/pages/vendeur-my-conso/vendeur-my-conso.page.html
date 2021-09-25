@@ -58,12 +58,14 @@
         <ion-col class="ion-no-padding">
           <div class="cssContainer cssSmallCard">
             <div class="cssNom">
-              <span class="cssLibel tajawal-Bold">الإسم :</span>
-              <span class="cssLibel tajawal-Medium">{{d.nom}}</span>
+              <!-- <span class="cssLibel tajawal-Bold">الإسم :</span>
+              <span class="cssLibel tajawal-Medium">{{d.nom}}</span> -->
+              <div class="cssValue1">{{d.nom}}</div>
+              <div class="cssValue2">{{d.id}}</div>
             </div>
             <div class="cssdate">
-              <span class="cssLibel tajawal-Boldd">تاريخ التسجيل :</span>
-              <span class="cssValue">{{d.dateInscription}}</span>
+              <div class="cssLibel tajawal-Boldd">تاريخ التسجيل</div>
+              <div class="cssValue">{{d.dateInscription}}</div>
             </div>
           </div>
         </ion-col>

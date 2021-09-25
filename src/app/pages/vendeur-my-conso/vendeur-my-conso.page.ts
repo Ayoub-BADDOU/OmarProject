@@ -19,17 +19,17 @@ export class VendeurMyConsoPage implements OnInit {
   ];
 
   data2 = [
-    { nom: "إبراهيم", dateInscription: "2021-09-05" },
-    { nom: "حمزة", dateInscription: "2021-08-15" },
-    { nom: "معاذ", dateInscription: "2021-09-08" },
-    { nom: "أنس", dateInscription: "2021-10-18" },
-    { nom: "خالد", dateInscription: "2021-07-09" },
-    { nom: "حمزة عفافي", dateInscription: "2021-08-15" },
-    { nom: "حمزة عفافي", dateInscription: "2021-08-15" },
-    { nom: "حمزة عفافي", dateInscription: "2021-08-15" },
-    { nom: "حمزة عفافي", dateInscription: "2021-08-15" },
-    { nom: "حمزة عفافي", dateInscription: "2021-08-15" },
-    { nom: "حمزة عفافي", dateInscription: "2021-08-15" },
+    { nom: "حمزة عفافي", dateInscription: "2021-09-05", id: "c_r_19961600" },
+    { nom: "حمزة شتيتي", dateInscription: "2021-08-15", id: "c_r_19961601" },
+    { nom: "معاذ", dateInscription: "2021-09-08", id: "c_r_19961602" },
+    { nom: "معاذ حيدور", dateInscription: "2021-10-18", id: "c_r_19961603" },
+    { nom: "خالد زيدوح", dateInscription: "2021-07-09", id: "c_r_19961604" },
+    { nom: "حمزة عفافي", dateInscription: "2021-08-15", id: "c_r_19961605" },
+    { nom: "حمزة عفافي", dateInscription: "2021-08-15", id: "c_r_19961606" },
+    { nom: "حمزة عفافي", dateInscription: "2021-08-15", id: "c_r_19961607" },
+    { nom: "حمزة عفافي", dateInscription: "2021-08-15", id: "c_r_19961608" },
+    { nom: "حمزة عفافي", dateInscription: "2021-08-15", id: "c_r_19961609" },
+    { nom: "حمزة عفافي", dateInscription: "2021-08-15", id: "c_r_19961610" },
   ]
   constructor() { }
 

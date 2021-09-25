@@ -13,11 +13,8 @@
 <ion-content class="bgInterface2">
   <ion-grid class="ion-no-padding">
     <div class="cssHeight">
-      <!-- <ion-row *ngFor="let d of data; let i = index;"
-        class="animate__animated animate__bounceInLeft animate__delay-{{i}}s"> -->
       <ion-row *ngFor="let d of data">
         <ion-col class="ion-no-padding">
-
           <div class="cssProduct">
             <div class="cssImg">
               <img [src]="d.img" alt="@youb">
@@ -41,7 +38,6 @@
               </p>
             </div>
           </div>
-
         </ion-col>
       </ion-row>
     </div>
@@ -51,9 +47,26 @@
 
     <ion-row>
       <ion-col>
-        <div class="cssSomme">
+        <!-- <div class="cssSomme">
           <div class="cssLibele tajawal-Boldd">المجموع</div>
           <div class="prixTotal tajawal-Boldd">{{(total).toFixed(2)}} درهم</div>
+        </div> -->
+        <div class="cssS">
+          <div class="cssSome tajawal-Boldd">المجموع</div>
+          <div class="cssSomeValue">
+            <div class="cssDhs">
+              <p class="cssValue">{{(total).toFixed(2)}}</p>
+              <p class="cssUnit">درهم</p>
+            </div>
+            <div class="cssDhs">
+              <p class="cssValue">260</p>
+              <p class="cssUnit">نقطة</p>
+            </div>
+            <div class="cssDhs">
+              <p class="cssValue">2<span>درهم</span></p>
+              <p class="cssUnit">%0.5 لمستحقات التطبيق</p>
+            </div>
+          </div>
         </div>
       </ion-col>
     </ion-row>
@@ -86,41 +99,4 @@
     </div>
   </div>
 
-  <!-- <div class="alerte" *ngIf="showErrorAlerte">
-    <div class="box2">
-      <div class="successImg">
-        <img src="../../../assets/images/errorAlert1.gif" alt="@youb" draggable="false">
-      </div>
-      <div class="message">
-        <p id="koho" class="message_content tajawal-Medium">
-          فشل في محاولة التسجيل. المرجو منك إعادة العملية.
-        </p>
-        <div class="message_btn_Err">
-          <button class="tajawal-Medium">إعادة المحاولة</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </ion-content>
-
-<!-- <ion-content class="bgInterface2">
-  <ion-grid class="ion-no-padding">
-
-    <ion-row>
-      <ion-col>
-        <div class="cssSomme">
-          <div class="cssLibele tajawal-Boldd">المجموع</div>
-          <div class="prixTotal tajawal-Boldd">{{(total).toFixed(2)}} درهم</div>
-        </div>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-button class="tajawal-Boldd" (click)="sendProducts()">طلب المنتوجات</ion-button>
-      </ion-col>
-    </ion-row>
-
-  </ion-grid>
-
-</ion-content> -->

@@ -13,20 +13,19 @@
 <ion-content class="bgInterface2">
   <ion-grid class="ion-no-padding">
     <div class="cssHeight">
-      <ion-row *ngFor="let d of data">
+      <ion-row *ngFor="let d of data" routerLink="/vendeur-demandedetail">
         <ion-col class="ion-no-padding">
           <div [style.background]="d.etatDemande == 'V'? '#00A651' : '#DC4E41'" class="cssCard">
             <!-- <div class="cssCard"> -->
+            <div>
+              <span class="cssDate">{{d.dateCommande}}</span>
+            </div>
             <div class="cssNum" *ngIf="d.etatDemande === 'V'">
-              <span class="cssLibel tajawal-Bold">رقم الطلبية :</span>
+              <span class="cssLibel Tajawal-Medium">رقم الطلبية :</span>
               <span class="cssValue">{{d.numComande}}</span>
             </div>
             <div class="cssMsgRefuse" *ngIf="d.etatDemande === 'R'">
-              <span class="cssLibel tajawal-Bold">قد تم رفض الطلبية</span>
-            </div>
-            <div class="cssDate">
-              <span class="cssLibel tajawal-Bold">تاريخ الطلبية :</span>
-              <span class="cssValue">{{d.dateCommande}}</span>
+              <span class="cssLibel Tajawal-Medium">قد تم رفض الطلبية</span>
             </div>
             <!-- </div> -->
           </div>

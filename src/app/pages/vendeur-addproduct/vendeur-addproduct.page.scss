@@ -1,5 +1,5 @@
 .cssForm{
-    width: 94%;
+    width: 96%;
     margin: 0px auto;
     margin-top: 20px;
 }
@@ -31,7 +31,7 @@ ion-col{
     justify-content: space-between;
 }
 .cssbtnImg{
-    width: 100px; height: 100px;
+    width: 90px; height: 90px;
     padding: 10px 5px;
     background: #F0344C;
     border-radius: 10px;
@@ -51,7 +51,7 @@ ion-col{
 }
 
 .cssImg{
-    width: 96px; height: 96px;
+    width: 88px; height: 88px;
     padding: 10px 5px;
     background: #fff;
     border: 2px #aaa dashed;
@@ -67,4 +67,53 @@ ion-button{
     color: #fff !important;
     font-size: 20px;
     border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 362px) {
+    .cssForm{
+        margin-top: 14px !important;
+    }
+    
+    .cssLabel{
+        font-size: 12px !important;
+    }
+
+    .cssInput, .cssTextAera{
+        margin: 0px 0px 6px 0px;
+        padding: 10px 0px;
+        padding-right: 6px !important;
+        border-radius: 4px;
+        font-size: 11px;
+    }
+    .cssInput{
+        height: 44px;
+    }
+
+    
+    // imgs
+    .cssbtnImg{
+        width: 70px; height: 70px;
+        padding: 10px 5px;
+        border-radius: 4px;
+    }
+    .cssbtnImg img{
+        width: 70%;
+        height: auto;
+    }
+    .cssbtnImg p{
+        margin: 0px;
+        font-size: 10px;
+    }
+    .cssImg{
+        width: 68px; height: 68px;
+        border-radius: 4px;
+    }
+
+    // btn submit
+    ion-button{
+        height: 50px;
+        font-size: 17px;
+        --border-radius: 4px !important;
+    }
 }

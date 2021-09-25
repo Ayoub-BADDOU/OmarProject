@@ -58,12 +58,28 @@
 
 
 // row 2
-.cssFlex{
+.cssCard2Infos{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.cssCard2 .cssValue{
-    font-size: 19px;
+.cssDate{
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    font-size: 14px;
+    color: #fafafa;
+}
+.cssCard2Infos .cssLibel{
+    text-align: center;
+    font-size: 15px !important;
+    margin: 2px 0px !important;
+}
+.cssCard2Infos .cssValue{
+    font-size: 18px !important;
+    font-weight: 600;
+    margin: 2px 0px;
+    text-align: center;
 }
 
 // row 3
@@ -91,4 +107,85 @@
     border-radius: 6px;
     border: none;
     padding: 0px 5px !important;
+}
+
+
+@media only screen and (max-width: 362px) {
+    .cssCard1, .cssCard2{
+        margin-top: 20px;
+        padding: 6px 10;
+        border-radius: 5px;
+    }
+    .cssTitleCard{
+        font-size: 12px;
+        position: relative;
+        top: -16px;
+    }
+    .cssTitleCard span{
+        position: relative;
+        top: -6px;
+    }
+    .cssContentCard{
+        position: relative;
+        top: -14px;
+    }
+    .cssContentCard div{margin-top: 4px;}
+    .cssContentCard .cssLibel{
+        font-size: 12px;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+    .cssContentCard .cssValue{
+        font-size: 13px;
+    }
+    
+    .cssContentCard .cssNum{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cssContentCard .cssNum .cssValue{
+        direction: rtl;
+        font-size: 15px;
+    }
+    
+    .cssContentCard .cssNum .cssBtn{
+        height: 36px !important; 
+        width: 90px !important;
+        font-size: 13px;
+        --border-radius: 4px !important;
+        border: none;
+    }
+    .cssContentCard .cssNum .cssBtn img{
+        width: 22px; height: 22px;
+        margin-right: 8px;
+    }
+    // ------------- row 2
+    .cssCard2{
+        height: 90px;
+    }
+    .cssCard2Infos{
+        margin-top: 8px !important;
+    }
+    .cssDate{
+        position: absolute;
+        left: 0px; top: -22px;
+        font-size: 13px;
+        color: #fafafa;
+    }
+    .cssCard2Infos .cssLibel{
+        font-size: 12px !important;
+        text-align: center;
+    }
+    .cssCard2Infos .cssValue{
+        font-size: 15px !important;
+    }
+
+    // ----- row 3
+    .cssBtn2, .cssBtn3{
+        margin-top: 0px !important;
+        height: 44px !important;
+        font-size: 17px;
+        --border-radius: 4px !important;
+    }
 }

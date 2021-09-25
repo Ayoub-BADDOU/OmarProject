@@ -15,26 +15,29 @@
 </ion-header>
 
 <ion-content class="bgInterface2">
-  <ion-grid>
-    <ion-row>
-      <ion-col>
+  <div class="cssContainer">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
 
-        <ion-card *ngFor="let d of data" class="cssCard">
-          <div class="cssImg">
-            <img [src]="d.ref" draggable="false" />
-          </div>
-          <ion-card-header class="cssHeaderCard">
-            <ion-card-title class="cssTitleCrd tajawal-Medium">{{d.nom}}</ion-card-title>
-            <h2 class="cssPrixInitial tajawal-Medium"><span class="tajawal-Bold">{{d.prixFinal}}</span> درهم</h2>
-            <h4 class="cssPrixFinal tajawal-Medium" *ngIf="d.prixInitial">
-              <span>{{d.prixInitial}}</span> درهم
-              <span class="cssRecduction">%{{d.reduction}} -</span>
-            </h4>
-            <ion-button class="cssBtnDetai tajawal-Bold" routerLink="/product-detail">تفاصيل المنتوج</ion-button>
-          </ion-card-header>
-        </ion-card>
+          <ion-card *ngFor="let d of data" class="cssCard">
+            <div class="cssImg">
+              <img [src]="d.ref" draggable="false" />
+            </div>
+            <ion-card-content class="cssHeaderCard">
+              <ion-card-title class="cssTitleCrd tajawal-Medium">{{d.nom}}</ion-card-title>
+              <h2 class="cssPrixInitial tajawal-Medium"><span class="tajawal-Bold">{{d.prixFinal}}</span> درهم</h2>
+              <h4 class="cssPrixFinal tajawal-Medium" *ngIf="d.prixInitial">
+                <span>{{d.prixInitial}}</span> درهم
+                <span class="cssRecduction">%{{d.reduction}} -</span>
+              </h4>
+              <ion-button class="cssBtnDetai tajawal-Bold" routerLink="/product-detail">تفاصيل المنتوج</ion-button>
+            </ion-card-content>
+          </ion-card>
 
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
 </ion-content>

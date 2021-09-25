@@ -49,7 +49,7 @@
 
     <!-- row 2 -->
     <ion-row>
-      <ion-col>
+      <ion-col class="ion-no-padding">
 
         <ion-card class="cssCard">
           <ion-card-content class="cssContentCard ion-no-padding">
@@ -60,11 +60,16 @@
             <p>
               <span class="cssLibel tajawal-Boldd">ثمن المنتج :</span>
               <span class="cssValue tajawal-Medium">{{data.productInfos.prixInitial}}</span> درهم
+              <!-- <span class="cssReduction">
+                <span class="cssLibel tajawal-Boldd">ثمن التخفيض :</span>
+                <span class="cssValue tajawal-Medium">{{data.productInfos.prixFinal}}</span> درهم
+              </span> -->
+            </p>
+            <p>
               <span class="cssReduction">
                 <span class="cssLibel tajawal-Boldd">ثمن التخفيض :</span>
                 <span class="cssValue tajawal-Medium">{{data.productInfos.prixFinal}}</span> درهم
               </span>
-
             </p>
             <p>
               <span class="cssLibel tajawal-Boldd">الفئة :</span>
@@ -82,7 +87,7 @@
 
     <!-- row 3 -->
     <ion-row>
-      <ion-col>
+      <ion-col class="ion-no-padding" style="margin: 10px 0px !important;">
 
         <ion-card class="cssCard2">
           <ion-card-content class="cssContentCard2 ion-no-padding">
@@ -103,6 +108,14 @@
           </ion-card-content>
         </ion-card>
 
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let d of data.imgs">
+      <ion-col class="ion-no-padding">
+        <div class="cssImages">
+          <img [src]="d">
+        </div>
       </ion-col>
     </ion-row>
 

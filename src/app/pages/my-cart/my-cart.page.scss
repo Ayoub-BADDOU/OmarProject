@@ -1,7 +1,7 @@
 
 .cssHeight{
     width: 100%;
-    height: calc(100% - 200px) !important;
+    height: calc(100% - 240px) !important;
     // height:400px;
     position: fixed;
     top: 55px !important;
@@ -21,7 +21,6 @@
 .cssProduct .cssImg{
     width: 110px;
     height: 110px;
-    background: #FFEDE7;
     border-radius: 4px;
     margin-right: 20px;
 }
@@ -60,7 +59,41 @@
     bottom: 80px;
     z-index: 100000;
 }
-
+.cssS{
+    height: 100px;
+    width: 100%;
+    padding: 0px 10px;
+    background-color: #EAE7E7;
+    color: #964A4A;
+    position: fixed;
+    bottom: 80px;
+    z-index: 100000;
+}
+.cssS .cssSome{
+    text-align: center;
+    font-size: 19px;
+    padding: 3px;
+    border-bottom: 1px solid #fff;
+}
+.cssS .cssSomeValue{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cssS p{
+    margin-top: 5px !important;
+    margin-bottom: 3px !important;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+.cssS .cssValue{
+    font-size: 19px;
+}
+.cssS .cssValue span{
+    font-size: 14px;
+    margin-right: 5px;
+}
 // row 3
 ion-button{
     width: 80% !important;
@@ -76,3 +109,75 @@ ion-button{
     z-index: 100000;
 }
 
+
+@media only screen and (max-width: 362px) {
+    // --- row 1
+    .cssProduct{
+        height: 110px !important;
+    }
+    .cssProduct .cssImg{
+        width: 100px;
+        margin: 3px 0px;
+    }
+
+    .cssInfos {
+        margin-right: 16px;
+    }
+    .cssInfos p{
+        margin: 2px;
+        color: #964A4A;
+    }
+    .cssInfos .cssLibel{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .cssInfos .cssValue{
+        font-size: 14px;
+    }
+
+    // --- row 2
+    // row 2
+    .cssSomme{
+        height: 60px;
+        font-size: 16px;
+    }
+
+    // row 3
+    ion-button{
+        width: 80% !important;
+        height: 40px;
+        font-size: 16px;
+        --border-radius: 4px;
+        position: fixed;
+        bottom: 8px;
+        left: 10%;
+    }
+
+    // --- somme
+    .cssHeight{
+        width: 100%;
+        height: calc(100% - 205px) !important;
+    }
+    .cssS{
+        height: 80px;
+        position: fixed;
+        bottom: 65px;
+        z-index: 100000;
+    }
+    .cssS .cssSome{
+        font-size: 16px;
+    }
+    .cssS p{
+        margin-top: 0px !important;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .cssS .cssValue{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .cssS .cssValue span{
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
