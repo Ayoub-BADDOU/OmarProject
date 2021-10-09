@@ -9,6 +9,16 @@ export class ProductsPage implements OnInit {
 
   commandeNum: number = 0;
 
+  categories = [
+    { category: "الخضر", ref: "../../../assets/images/category/cat1.png" },
+    { category: "الفواكه", ref: "../../../assets/images/category/cat2.png" },
+    { category: "الدقيق", ref: "../../../assets/images/category/cat3.png" },
+    // { category: "اللحوم", ref: "../../../assets/images/category/cat4.png" },
+    { category: "الشاي", ref: "../../../assets/images/category/cat5.png" },
+    { category: "الشاي", ref: "../../../assets/images/category/cat5.png" },
+    { category: "الشاي", ref: "../../../assets/images/category/cat5.png" },
+  ]
+
   data = [
     { nom: "ليبتون 25 كيس", prixFinal: "27.60", prixInitial: "33.10", reduction: ((1 - (27.70 / 33.10)) * 100).toFixed(0), ref: "../../../assets/images/product/prod1.jpg" },
     { nom: "شاي لوبان الأخضر ", prixFinal: "79.00", prixInitial: "86.60", reduction: ((1 - (79.00 / 86.60)) * 100).toFixed(0), ref: "../../../assets/images/product/prod2.jpg" },

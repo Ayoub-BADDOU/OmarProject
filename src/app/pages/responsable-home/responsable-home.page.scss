@@ -18,32 +18,42 @@ ion-item {
     margin: 6px 0px;
 }
 
-// ------------------- row 1
 
-.cssSmallCard1, .cssSmallCard2{
-    margin: 15px 10px;
-    padding: 5px 10px 5px 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-    background: #FF7848;
-    color: #fff;
+// ------------------- row 2 new
+.cssContainer{
+    width: 96%;
+    margin: 10px auto;
+}
+.cssContainer .cssCardVendeur{
+    width: 94%;
+    margin: 6px auto;
+    padding: 6px;
+    background: #FEC260;
     border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    cursor: pointer;
 }
-.cssSmallCard1 div, .cssSmallCard2 div{
-    margin: 5px 0px !important;
+.cssContainer .cssAvatar{
+    width: 100px; height: 100px;
+    margin: 0px auto;
 }
-.cssLibel{
-    font-size: 15px;
+
+.cssContainer .cssInfos{
+    margin: 8px 4px;
+}
+.cssContainer .cssName{
+    margin-top: 12px;
+    font-size: 16px !important;
     font-weight: 600;
+    color: #4C453F;
+    text-align: center;
 }
-.cssValue{
-    margin-right: 8px;
-    font-size: 15px;
+.cssContainer .cssZone{
+    margin-top: 6px;
+    font-size: 14px !important;
+    color: #555;
+    text-align: center;
 }
-
-.cssSmallCard2{
-    background: #22B8B8;
-}
-
 // ------------------- row 2
 .cssCard3{
     margin: 0px 10px;
@@ -195,19 +205,19 @@ ion-button{
 }
 
 
-// --- Vendeur
+// --- row 1
 .cssResponsable{
     margin: 15px 10px;
-    color: #333;
 }
 .cssResponsable .cssCol{
-    width: 98%; height: 50px;
+    width: 96%; height: 50px;
     padding-top: 12px;
     padding-right: 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-    margin-top: 6px;
     border-radius: 4px;
 }
+.cssResponsable .cssCol:first-child{margin: 5px 5px 0px 0px;}
+.cssResponsable .cssCol:last-child{margin: 5px 3px 0px 0px;}
 .cssResponsable .cssBackground1{background: #FF7848; color: #fff;}
 .cssResponsable .cssBackground2{background: #22B8B8; color: #fff;}
 
@@ -236,6 +246,7 @@ ion-button{
 .cssResponsable .cssLibel{
     font-size: 15px;
     font-weight: 600;
+    margin-left: 10px;
 }
 .cssResponsable .cssNumber{
     font-size: 18px;
@@ -257,19 +268,6 @@ ion-button{
         margin: 5px 0px;
     }
     
-// ------------------- row 1
-    .cssSmallCard1, .cssSmallCard2{
-        margin: 15px 6px;
-        border-radius: 4px;
-    }
-    .cssLibel{
-        font-size: 11px;
-        font-weight: 600;
-    }
-    .cssValue{
-        margin-right: 5px;
-        font-size: 13px;
-    }
 
 // ------------------- row 1 : Vendeur
     .cssResponsable{
@@ -283,6 +281,26 @@ ion-button{
         margin-right: 10px;
     }
     .cssResponsable .cssValue{
+        font-size: 13px !important;
+    }
+
+    // ------------------- row 2 new
+    .cssContainer .cssCardVendeur{
+        padding: 4px;
+        border-radius: 4px;
+    }
+    .cssContainer .cssAvatar{
+        width: 90px; height: 90px;
+    }
+
+    .cssContainer .cssInfos{
+        margin: 6px 2px;
+    }
+    .cssContainer .cssName{
+        margin-top: 8px;
+        font-size: 14px !important;
+    }
+    .cssContainer .cssZone{
         font-size: 13px !important;
     }
 
@@ -337,7 +355,7 @@ ion-button{
 // ------------------- row 3
     .cssSmallCard6{
         padding: 4px;
-        height: 40px;
+        height: 50px;
     }
     // name
     .cssName{

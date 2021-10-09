@@ -26,6 +26,33 @@
 
   <!-- Detail infos -->
   <ion-grid>
+
+    <!-- row 0 -->
+    <ion-row>
+      <ion-col class="ion-no-padding">
+        <div class="cssCard">
+          <div class="cssTitle Almarai-Bold">{{data.productInfos.nom}}</div>
+          <div class="cssPrix">
+            <div class="cssPrixFinal tajawal-Medium">
+              <span>{{data.productInfos.prixFinal}}</span> درهم
+            </div>
+            <div class="cssPrixInitial tajawal-Medium">
+              <span>{{data.productInfos.prixInitial}}</span> درهم
+            </div>
+          </div>
+          <div class="cssDescription">
+            <p class="cssLibel tajawal-Boldd">وصف المنتج :</p>
+            <p>{{data.productInfos.description}}</p>
+          </div>
+          <!-- <p>
+              <span class="cssLibel tajawal-Boldd">وصف المنتج :</span>
+              <span class="cssValue tajawal-Medium">{{data.productInfos.description}}</span>
+            </p> -->
+        </div>
+
+      </ion-col>
+    </ion-row>
+
     <!-- row 1 -->
     <ion-row>
       <ion-col>
@@ -33,8 +60,9 @@
           <div class="cssAddMinus" (click)="minusQty()">
             <fa-icon icon="minus"></fa-icon>
           </div>
-          <div class="cssQty">
-            <span *ngIf="qte > 0? qte : 1">{{qte}}</span>
+          <div class="cssQty" *ngIf="qte > 0? qte : 1">
+            {{qte}}
+            <!-- <span *ngIf="qte > 0? qte : 1">{{qte}}</span> -->
           </div>
           <div class="cssAddMinus" (click)="addQty()">
             <fa-icon icon="plus"></fa-icon>
@@ -48,7 +76,7 @@
     </ion-row>
 
     <!-- row 2 -->
-    <ion-row>
+    <!-- <ion-row>
       <ion-col class="ion-no-padding">
 
         <ion-card class="cssCard">
@@ -60,10 +88,7 @@
             <p>
               <span class="cssLibel tajawal-Boldd">ثمن المنتج :</span>
               <span class="cssValue tajawal-Medium">{{data.productInfos.prixInitial}}</span> درهم
-              <!-- <span class="cssReduction">
-                <span class="cssLibel tajawal-Boldd">ثمن التخفيض :</span>
-                <span class="cssValue tajawal-Medium">{{data.productInfos.prixFinal}}</span> درهم
-              </span> -->
+             
             </p>
             <p>
               <span class="cssReduction">
@@ -83,31 +108,30 @@
         </ion-card>
 
       </ion-col>
-    </ion-row>
+    </ion-row> -->
 
     <!-- row 3 -->
     <ion-row>
       <ion-col class="ion-no-padding" style="margin: 10px 0px !important;">
 
-        <ion-card class="cssCard2">
-          <ion-card-content class="cssContentCard2 ion-no-padding">
-            <p>
-              <span class="cssLibel tajawal-Boldd">إسم البائع :</span>
-              <span class="cssValue tajawal-Medium">{{data.vendeurInfos.nom}}</span>
-            </p>
-            <p>
-              <span class="cssLibel tajawal-Boldd">رقم الهاتف :</span>
-              <span class="cssValue tajawal-Medium">{{data.vendeurInfos.num}}</span>
-              <span class="cssButtonCover">
-                <ion-button class="ion-no-padding tajawal-Bold" routerLink="/product-detail">
-                  تواصل
-                  <fa-icon icon="phone-alt"></fa-icon>
-                </ion-button>
-              </span>
-            </p>
-          </ion-card-content>
-        </ion-card>
-
+        <div class="cssCard2">
+          <div>
+            <span class="cssLibel tajawal-Boldd">إسم البائع :</span>
+            <span class="cssValue tajawal-Medium">{{data.vendeurInfos.nom}}</span>
+          </div>
+          <div>
+            <ion-button class="ion-no-padding tajawal-Bold" routerLink="/product-detail">
+              تواصل
+              <fa-icon icon="phone-alt"></fa-icon>
+            </ion-button>
+          </div>
+        </div>
+        <div class="cssSecurity">
+          <span class="cssLibel">
+            <fa-icon icon="shield-alt"></fa-icon>
+          </span>
+          <span class="cssValue tajawal-Medium">إرجاع المنتج مجانًا خلال 7 أيام وفق الشروط المنصوص عليها</span>
+        </div>
       </ion-col>
     </ion-row>
 

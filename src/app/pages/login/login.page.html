@@ -12,13 +12,13 @@
         </ion-col>
       </ion-row>
 
-      <form class="cssForm">
+      <form class="cssForm" [formGroup]="dataForm">
         <ion-row>
           <ion-col>
             <div>
               <ion-label class="cssLabel tajawal-Medium">إسم آلمستخدم</ion-label>
               <ion-input placeholder="البريد الإلكتروني أو رقم الهاتف" type="text" [name]="identifant"
-                class="cssInput tajawal-Medium">
+                class="cssInput tajawal-Medium" formControlName="id" autocomplete="false">
               </ion-input>
             </div>
           </ion-col>
@@ -29,7 +29,8 @@
             <div>
               <ion-label class="cssLabel tajawal-Medium">الرمز السري</ion-label>
               <ion-input placeholder="&#11044; &#11044; &#11044; &#11044; &#11044; &#11044; &#11044; &#11044;"
-                [type]="!showPassword ? 'password' : 'text'" class="cssInput tajawal-Medium" [name]="password">
+                [type]="!showPassword ? 'password' : 'text'" class="cssInput tajawal-Medium" [name]="password"
+                formControlName="pwd" autocomplete="false">
               </ion-input>
               <ion-icon slot="start" [name]="passwordToggleIcon" (click)="togglePassword()" class="icon-login">
               </ion-icon>

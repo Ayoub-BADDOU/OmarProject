@@ -10,7 +10,7 @@
       <ion-card *ngFor="let d of data; let i = index"
         class="bgInterface2 ion-no-margin animate__animated animate__fadeInLeft animate__delay-{{i}}s">
         <ion-card-header>
-          <ion-card-title class="tajawal-Bold color1 cssCardTitle">مدينة {{d.ville}}</ion-card-title>
+          <ion-card-title class="tajawal-Bold color1 cssCardTitle">مدينة {{d.name}}</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
@@ -22,7 +22,7 @@
               <h3 class="almarai-bold">إنضم إلى البائعين</h3>
             </div>
 
-            <div class="cssBtn" routerLink="/logregister">
+            <div class="cssBtn" [routerLink]="['/logregister', {role:'C', ville: d.name}]">
               <img src="../../../assets/images/register/clients1.png" alt="@ayoub">
               <h5 class="almarai-Regular">{{d.consomateur}} عميل</h5>
               <h3 class="almarai-bold">إنضم إلى العملاء</h3>

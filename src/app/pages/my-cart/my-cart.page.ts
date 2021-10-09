@@ -11,53 +11,53 @@ export class MyCartPage implements OnInit {
   data = [
     {
       img: "../../../assets/images/product/prod2.jpg",
-      codeProduit: "AD2105444",
-      category: "الشاي",
+      nomProduit: "شاي لوبان الأخضر",
       qte: 20,
-      prixUnitaire: 22.50
+      prixUnitaire: 22.50,
+      point: 3
     },
     {
       img: "../../../assets/images/product/prod4.jpg",
-      codeProduit: "AD2105444",
-      category: "الشاي",
+      nomProduit: "شاي الزعتر الزعيترة",
       qte: 32,
-      prixUnitaire: 45.90
+      prixUnitaire: 45.90,
+      point: 2.5
     },
     {
       img: "../../../assets/images/product/prod4.jpg",
-      codeProduit: "AD2105444",
-      category: "الشاي",
+      nomProduit: "شاي الزعتر الزعيترة",
       qte: 32,
-      prixUnitaire: 45.90
+      prixUnitaire: 45.90,
+      point: 2.5
     },
     {
       img: "../../../assets/images/product/prod1.jpg",
-      codeProduit: "AD2105444",
-      category: "أدوات التنظيف",
+      nomProduit: "ليبتون 25 كيس",
       qte: 12,
-      prixUnitaire: 30.10
+      prixUnitaire: 30.10,
+      point: 2
     },
     {
       img: "../../../assets/images/product/prod2.jpg",
-      codeProduit: "AD2105444",
-      category: "الشاي",
+      nomProduit: "شاي لوبان الأخضر",
       qte: 20,
-      prixUnitaire: 22.50
+      prixUnitaire: 22.50,
+      point: 3
     },
     {
       img: "../../../assets/images/product/prod4.jpg",
-      codeProduit: "AD2105444",
-      category: "الشاي",
+      nomProduit: "شاي الزعتر الزعيترة",
       qte: 32,
-      prixUnitaire: 45.90
+      prixUnitaire: 45.90,
+      point: 2.5
     },
     {
       img: "../../../assets/images/product/prod2.jpg",
-      codeProduit: "AD2105444",
-      category: "الشاي",
+      nomProduit: "شاي لوبان الأخضر",
       qte: 20,
-      prixUnitaire: 22.50
-    },
+      prixUnitaire: 22.50,
+      point: 3
+    }
   ]
 
   total: number = 0;
@@ -98,4 +98,18 @@ export class MyCartPage implements OnInit {
     console.log('onDidDismiss resolved with role', role);
   }
 
+  qte: number = this.data[0].point;
+  minusQty() {
+    if (this.qte > 1) {
+      this.qte = this.qte - 1;
+      console.log(this.qte);
+    }
+    else {
+      this.qte = 1;
+    }
+  }
+
+  addQty() {
+    this.qte = this.qte + 1;
+  }
 }

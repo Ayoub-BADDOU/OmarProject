@@ -54,9 +54,11 @@ export class ResponsableHomePage implements OnInit {
   }
 
   data2 = [
-    { vendeur: "إيمان أوفقير", zone: "حي أكدال" },
-    { vendeur: "عبد الفتاح ارقياق", zone: "حي الفتح" },
-    { vendeur: "مونية المنبهي", zone: "حي عكاري" }
+    { vendeur: "إيمان أوفقير", zone: "حي أكدال", genre: "F" },
+    { vendeur: "عبد الفتاح ارقياق", zone: "حي الفتح", genre: "H" },
+    { vendeur: "معاد المنبهي", zone: "حي الفتح", genre: "H" },
+    { vendeur: "مونية المنبهي", zone: "حي عكاري", genre: "F" },
+    { vendeur: "يونس الشتيتي", zone: "حي الرياض", genre: "H" }
   ]
 
 
@@ -66,6 +68,7 @@ export class ResponsableHomePage implements OnInit {
 
   isShow: boolean = false;
   numClickMenu: number = 0;
+  detail: boolean = false;
 
   constructor(private menu: MenuController) { }
 
@@ -78,4 +81,12 @@ export class ResponsableHomePage implements OnInit {
   ionViewWillLeave() {
     this.menu.enable(false, 'responsable-menu')
   }
+
+  showDetail() {
+    this.detail = true;
+  }
+  showVendeur() {
+    this.detail = false;
+  }
+
 }

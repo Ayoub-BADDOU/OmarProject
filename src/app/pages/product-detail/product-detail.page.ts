@@ -16,11 +16,11 @@ export class ProductDetailPage implements OnInit {
       "../../../assets/images/productDetail/prod-detail3.png"
     ].reverse(),
     productInfos: {
-      nom: "ليبتون 25 كيس",
+      nom: "شاي أخضر صافٍ  ليبتون 25 كيس",
       prixInitial: (33.10).toFixed(2),
       prixFinal: (27.60).toFixed(2),
       category: "الشاي",
-      description: "لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه."
+      description: "شاي ليبتون الأخضر الطبيعي مصنوع من أجود الأوراق في العالم. طبيعي ، لذيذ ، ومليء بالفلافونويد الطبيعي. يتميز بطعم خفيف وممتع وبدون مرارة انه ببساطة لذيذ."
     },
     vendeurInfos: {
       nom: "عبد القادر الجلالي",

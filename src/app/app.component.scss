@@ -71,4 +71,33 @@
 }
 ion-item[button] {
     pointer-events: auto !important;
-  }
+}
+
+@media only screen and (max-width: 362px) {
+    .bgColorProfi .profil{
+        padding: 10px;
+    }
+    .bgColorProfi .profil ion-avatar{
+        width: 90px;
+        height: 90px;
+        margin-left: 10px;
+    }
+
+    .bgColorProfi .detail div{
+        font-size: 15px; 
+    }
+    .bgColorProfi .profil h4{
+        font-size: 14px;
+    }
+
+
+    .cssMenu .cssIconMenu{
+        margin-left: 12px;
+    }
+    .cssMenu .cssIconMenu fa-icon{
+        font-size: 20px;
+    }
+    .cssMenu .cssItemMenu{
+        font-size: 16px;
+    }
+}

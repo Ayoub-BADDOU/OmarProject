@@ -12,6 +12,7 @@
 
 <ion-content class="bgInterface2">
   <ion-grid class="ion-no-padding">
+
     <div class="cssHeight">
       <ion-row *ngFor="let d of data">
         <ion-col class="ion-no-padding">
@@ -20,37 +21,45 @@
               <img [src]="d.img" alt="@youb">
             </div>
             <div class="cssInfos">
-              <p>
-                <span class="cssLibel tajawal-Boldd">كود المنتج :</span>
-                <span class="cssValue tajawal-Medium cssNumber">{{d.codeProduit}}</span>
-              </p>
-              <p>
-                <span class="cssLibel tajawal-Boldd">فئة المنتج :</span>
-                <span class="cssValue tajawal-Medium">{{d.category}}</span>
-              </p>
-              <p>
-                <span class="cssLibel tajawal-Boldd">الكمية :</span>
-                <span class="cssValue tajawal-Medium cssNumber">{{d.qte}}</span>
-              </p>
-              <p>
-                <span class="cssLibel tajawal-Boldd">ثمن الوحدة :</span>
-                <span class="cssValue tajawal-Medium cssNumber">{{(d.prixUnitaire).toFixed(2)}}</span> درهم
-              </p>
+              <div class="cssName tajawal-Medium">{{d.nomProduit}}</div>
+              <div class="cssPrixT">
+                <div class="cssPrix">
+                  <span>{{(d.prixUnitaire).toFixed(2)}}</span> درهم
+                </div>
+                <div class="cssPrix">
+                  <span>{{(d.point).toFixed(1)}}</span> نقطة
+                </div>
+              </div>
+              <div class="cssPrixT">
+                <div class="cssQuantity">
+                  <div class="cssAddMinus" (click)="minusQty()">
+                    <fa-icon icon="minus"></fa-icon>
+                  </div>
+                  <div class="cssQty" *ngIf="qte > 0? qte : 1">
+                    {{d.qte}}
+                    <!-- <span *ngIf="qte > 0? qte : 1">{{qte}}</span> -->
+                  </div>
+                  <div class="cssAddMinus" (click)="addQty()">
+                    <fa-icon icon="plus"></fa-icon>
+                  </div>
+                </div>
+
+                <div class="cssDelete">
+                  <div class="tajawal-Medium cssTrashBtn">
+                    <fa-icon icon="trash-alt"></fa-icon>
+                    حذف المنتج
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </ion-col>
       </ion-row>
     </div>
 
-
-
-
     <ion-row>
       <ion-col>
-        <!-- <div class="cssSomme">
-          <div class="cssLibele tajawal-Boldd">المجموع</div>
-          <div class="prixTotal tajawal-Boldd">{{(total).toFixed(2)}} درهم</div>
-        </div> -->
         <div class="cssS">
           <div class="cssSome tajawal-Boldd">المجموع</div>
           <div class="cssSomeValue">
@@ -64,13 +73,12 @@
             </div>
             <div class="cssDhs">
               <p class="cssValue">2<span>درهم</span></p>
-              <p class="cssUnit">%0.5 لمستحقات التطبيق</p>
+              <p class="cssUnit">لمستحقات التطبيق</p>
             </div>
           </div>
         </div>
       </ion-col>
     </ion-row>
-
     <ion-row>
       <ion-col>
         <ion-button class="tajawal-Boldd animate__animated animate__zoomIn animate__delay-1s" (click)="sendProducts()">
@@ -78,8 +86,6 @@
         </ion-button>
       </ion-col>
     </ion-row>
-
-
   </ion-grid>
 
   <!-- alert error && success -->

@@ -1,7 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MenuController } from "@ionic/angular";
+import { UserService } from 'src/app/services/user.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -9,15 +12,21 @@ import { MenuController } from "@ionic/angular";
 })
 export class LoginPage implements OnInit {
 
+  dataForm: FormGroup;
+
   showPassword: boolean = false;
   passwordToggleIcon = "eye";
   showErrorAlerte: boolean = false;
   password: any = "";
   identifant: any = "";
 
-  constructor(private route: Router, private menu: MenuController) { }
+  constructor(private route: Router, private menu: MenuController, private userService: UserService, private fb: FormBuilder,) { }
 
   ngOnInit() {
+    this.dataForm = this.fb.group({
+      id: [""],
+      pwd: [""]
+    })
   }
 
   // show & hide password
@@ -40,9 +49,14 @@ export class LoginPage implements OnInit {
   }
 
   login() {
+    let data = this.dataForm.value;
+    this.userService.login(data).subscribe((res: any) => {
+      console.log('token________ : ', res.token);
+      localStorage.setItem('token', res.token);
 
-    this.route.navigate(["categories"])
-
+      this.route.navigate(["categories"])
+      console.log("login successed");
+    })
   }
 
   reDo() {

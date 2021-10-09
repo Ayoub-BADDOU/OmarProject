@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VilleQuartierService } from 'src/app/services/ville-quartier.service';
 
 @Component({
   selector: 'app-logcity',
@@ -7,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogcityPage implements OnInit {
 
-  data = [
-    { ville: "الرباط", consomateur: 9000, vendeur: 36 },
-    { ville: "سلا", consomateur: 5700, vendeur: 48 },
-    { ville: "تمارة", consomateur: 3200, vendeur: 12 },
-    { ville: "القنيطرة", consomateur: 7300, vendeur: 26 },
-  ]
+  data: any = []
 
-  constructor() { }
+  constructor(private V_Q_service: VilleQuartierService) {
+    this.V_Q_service.getVilles().subscribe(res => {
+      console.log("ttttt", res);
+      this.data = res;
+    })
+  }
 
   ngOnInit() {
   }

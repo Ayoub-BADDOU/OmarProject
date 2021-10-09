@@ -17,9 +17,48 @@
 <ion-content class="bgInterface2">
   <div class="cssContainer">
     <ion-grid>
+      <!-- catégories -->
+      <ion-row style="margin-bottom: 12px !important;" class="cssCategories">
+        <ion-col *ngFor="let d of categories" routerLink="/products">
+          <div>
+            <div [style.background-image]="'url('+ d.ref +')'" class="cssImg"></div>
+            <div class="cssLibel tajawal-Medium">{{d.category}}</div>
+          </div>
+          <!-- <ion-card class="cssCard">
+            <div [style.background-image]="'url('+ d.ref +')'" class="cssImg"></div>
+            <ion-card-header class="cssHeaderCard">
+              <ion-card-title class="cssTitleCrd tajawal-Medium">{{d.category}}</ion-card-title>
+            </ion-card-header>
+          </ion-card> -->
+        </ion-col>
+      </ion-row>
+      <!-- products -->
       <ion-row>
+        <ion-col *ngFor="let d of data" size="6">
+          <ion-card class="cssCard">
+            <div class="cssImg">
+              <img [src]="d.ref" draggable="false" />
+            </div>
+            <div class="cssPromotion">
+              <span class="cssRecduction">%{{d.reduction}} -</span>
+            </div>
+            <ion-card-content class="cssHeaderCard">
+              <ion-card-title class="cssTitleCrd tajawal-Medium">{{d.nom}}</ion-card-title>
+              <div class="cssPrix">
+                <h2 class="cssPrixInitial tajawal-Medium"><span class="tajawal-Bold">{{d.prixFinal}}</span> درهم</h2>
+                <h4 class="cssPrixFinal tajawal-Medium" *ngIf="d.prixInitial">
+                  <span>{{d.prixInitial}}</span> درهم
+                </h4>
+              </div>
+              <div class="cssBtnDetail">
+                <ion-button class="tajawal-Bold" routerLink="/product-detail">تفاصيل المنتوج</ion-button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <!-- <ion-row>
         <ion-col>
-
           <ion-card *ngFor="let d of data" class="cssCard">
             <div class="cssImg">
               <img [src]="d.ref" draggable="false" />
@@ -34,9 +73,9 @@
               <ion-button class="cssBtnDetai tajawal-Bold" routerLink="/product-detail">تفاصيل المنتوج</ion-button>
             </ion-card-content>
           </ion-card>
-
         </ion-col>
-      </ion-row>
+      </ion-row> -->
+
     </ion-grid>
   </div>
 

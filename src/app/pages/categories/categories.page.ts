@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { ParametresService } from 'src/app/services/parametres.service';
 
 @Component({
   selector: 'app-categories',
@@ -34,7 +35,9 @@ export class CategoriesPage implements OnInit {
     autoplay: true
   };
 
-  constructor(private menu: MenuController, private route: Router) { }
+  constructor(private menu: MenuController, private route: Router, private paramService: ParametresService) {
+    this.getCategory();
+  }
 
   ngOnInit() {
   }
@@ -58,9 +61,17 @@ export class CategoriesPage implements OnInit {
 
   logOut() {
     // this.route.navigate(['login']);
+    localStorage.clear();
     this.route.navigate(['/login'])
     console.log('test');
+  }
 
+  categories: any = []
+  getCategory() {
+    this.paramService.getCategories().subscribe((res) => {
+      // console.log(res);
+      this.categories = res;
+    })
   }
 
 }
