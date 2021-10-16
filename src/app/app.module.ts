@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { JWT_OPTIONS, JwtModule } from '@auth0/angular-jwt';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -16,12 +17,30 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { TokeninterseptService } from './interseptors/tokenintersept.service';
 
+import { IonicStorageModule, Storage } from '@ionic/storage-angular';
+
+export function jwtOptionsFactory(storage) {
+  return {
+    tokenGetter: () => {
+      return storage.get('token');
+    }
+  }
+}
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule, FormsModule, FontAwesomeModule, HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-  { provide: HTTP_INTERCEPTORS, useClass: TokeninterseptService, multi: true }],
+  imports: [BrowserModule, IonicStorageModule.forRoot(), JwtModule.forRoot({
+    jwtOptionsProvider: {
+      provide: JWT_OPTIONS,
+      useFactory: jwtOptionsFactory,
+      deps: [Storage]
+    }
+  }), IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule, FormsModule, FontAwesomeModule, HttpClientModule],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: HTTP_INTERCEPTORS, useClass: TokeninterseptService, multi: true }
+  ],
   bootstrap: [AppComponent],
 })
 

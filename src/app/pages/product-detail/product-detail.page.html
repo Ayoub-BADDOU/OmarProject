@@ -2,11 +2,11 @@
   <ion-toolbar class="cssHeader bgheader">
 
     <ion-title class="tajawal-Bold cssTitleHead">
-      <span class="cssBtnHeaderLeft" routerLink="/products">
+      <span class="cssBtnHeaderLeft" [routerLink]="['/products', {id:data.productInfos.category}]">
         <fa-icon icon="arrow-left"></fa-icon>
       </span>
 
-      <span class="cssBtnHeader" routerLink="/my-cart">
+      <span class="cssBtnHeader" [routerLink]="['/my-cart', {id:data.productInfos.category}]">
         <fa-icon icon="shopping-basket"></fa-icon>
         <ion-badge *ngIf="commandeNum > 0">{{commandeNum}}</ion-badge>
       </span>
@@ -26,7 +26,6 @@
 
   <!-- Detail infos -->
   <ion-grid>
-
     <!-- row 0 -->
     <ion-row>
       <ion-col class="ion-no-padding">
@@ -54,7 +53,7 @@
     </ion-row>
 
     <!-- row 1 -->
-    <ion-row>
+    <ion-row *ngIf="!isProductExitsInOrder">
       <ion-col>
         <div class="cssQuantity">
           <div class="cssAddMinus" (click)="minusQty()">

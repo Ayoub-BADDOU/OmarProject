@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MenuController } from "@ionic/angular";
 import { UserService } from 'src/app/services/user.service';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,7 @@ export class LoginPage implements OnInit {
   password: any = "";
   identifant: any = "";
 
-  constructor(private route: Router, private menu: MenuController, private userService: UserService, private fb: FormBuilder,) { }
+  constructor(private route: Router, private storage: Storage, private menu: MenuController, private userService: UserService, private fb: FormBuilder,) { }
 
   ngOnInit() {
     this.dataForm = this.fb.group({
@@ -50,10 +51,10 @@ export class LoginPage implements OnInit {
 
   login() {
     let data = this.dataForm.value;
-    this.userService.login(data).subscribe((res: any) => {
+    this.userService.login(data).subscribe(async (res: any) => {
       console.log('token________ : ', res.token);
-      localStorage.setItem('token', res.token);
-
+      // localStorage.setItem('token', res.token);
+      await this.storage.set('token', res.token)
       this.route.navigate(["categories"])
       console.log("login successed");
     })

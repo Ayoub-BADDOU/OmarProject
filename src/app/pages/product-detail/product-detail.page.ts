@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MyOrdersService } from 'src/app/services/my-orders.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,23 +12,21 @@ export class ProductDetailPage implements OnInit {
 
 
   data = {
-    imgs: [
-      "../../../assets/images/productDetail/prod-detail1.jpg",
-      "../../../assets/images/productDetail/prod-detail2.png",
-      "../../../assets/images/productDetail/prod-detail3.png"
-    ].reverse(),
+    imgs: [],
     productInfos: {
-      nom: "شاي أخضر صافٍ  ليبتون 25 كيس",
-      prixInitial: (33.10).toFixed(2),
-      prixFinal: (27.60).toFixed(2),
-      category: "الشاي",
-      description: "شاي ليبتون الأخضر الطبيعي مصنوع من أجود الأوراق في العالم. طبيعي ، لذيذ ، ومليء بالفلافونويد الطبيعي. يتميز بطعم خفيف وممتع وبدون مرارة انه ببساطة لذيذ."
+      nom: "",
+      prixInitial: 0,
+      prixFinal: 0,
+      category: "",
+      description: ""
     },
     vendeurInfos: {
-      nom: "عبد القادر الجلالي",
-      num: "0" + (622556677).toFixed(0)
+      nom: "",
+      num: ""
     }
   }
+
+  // num: "0" + (622556677).toFixed(0)
 
   slideOpts = {
     initialSlide: this.data.imgs.length - 1,
@@ -34,9 +34,37 @@ export class ProductDetailPage implements OnInit {
   };
 
   qte: number = 1;
-  commandeNum: number = 0
+  commandeNum: number = 0;
+  isProductExitsInOrder: boolean = false;
+  product: any;
 
-  constructor() { }
+  constructor(private activeRouter: ActivatedRoute, private orderService: MyOrdersService) {
+    this.commandeNum = this.orderService.getNumberProductInOrder();
+
+    this.activeRouter.params.subscribe(params => {
+      this.product = params
+      this.data = {
+        imgs: params.urls.split(','),
+        productInfos: {
+          nom: params.nom,
+          prixInitial: params.prixinitial,
+          prixFinal: params.prixfinal,
+          category: params.categorie,
+          description: params.description
+        },
+        vendeurInfos: {
+          nom: params.nomprenom,
+          num: params.tel
+        }
+      }
+
+      this.isProductExitsInOrder = this.checkProductInOrder(params.id)
+      console.log('-----------------', this.isProductExitsInOrder, this.checkProductInOrder(params.id), params.id, this.orderService.myCart);
+
+    })
+
+  }
+
 
   ngOnInit() {
   }
@@ -55,8 +83,21 @@ export class ProductDetailPage implements OnInit {
     this.qte = this.qte + 1;
   }
 
-  addToCart() {
-    this.commandeNum++;
+  checkProductInOrder(id): boolean {
+    for (let i = 0; i < this.orderService.myCart.length; i++) {
+      if (id == this.orderService.myCart[i].id) return true
+    }
+    return false
   }
+
+  addToCart() {
+    let product = { ...this.product, quantite: this.qte }
+    this.orderService.addProductToOrder(product)
+    this.commandeNum++;
+    this.isProductExitsInOrder = true;
+  }
+
+
+
 
 }

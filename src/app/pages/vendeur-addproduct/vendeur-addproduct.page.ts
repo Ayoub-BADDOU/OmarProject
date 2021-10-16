@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ParametresService } from 'src/app/services/parametres.service';
 
 @Component({
   selector: 'app-vendeur-addproduct',
@@ -8,18 +10,34 @@ import { AlertController } from '@ionic/angular';
 })
 export class VendeurAddproductPage implements OnInit {
 
+  dataForm: FormGroup;
   showErrorAlerte: boolean = false;
   showSuccessAlerte: boolean = false;
 
-  constructor(public alertIonic: AlertController) { }
+  constructor(public alertIonic: AlertController, private fb: FormBuilder, private paramService: ParametresService) { }
 
   ngOnInit() {
+    this.dataForm = this.fb.group({
+      nom: [""],
+      prixInitial: [""],
+      prixFinal: [""],
+      category: [""],
+      ville: [""],
+      description: [""],
+    })
+  }
+
+  setProduct() {
+    let data = this.dataForm.value;
+    this.paramService.setProduct(data).subscribe((res: any) => {
+      this.showSuccessAlerte = true;
+    })
   }
 
 
   // modelMsg = "تم إرسال المنتج إلى الإدارة، سيتم نشره إلى عملائك  بعد التأكيد."
   msg = "هل أنت متأكد من صحة المعلومات التي قمت بإدخالها لنشر المنتج ؟"
-  async pushProduct() {
+  async showAlert() {
     const alert = await this.alertIonic.create({
       cssClass: 'my-custom-class',
       header: '',
@@ -28,7 +46,7 @@ export class VendeurAddproductPage implements OnInit {
       buttons: ['إلغاء', {
         text: 'تأكيد',
         handler: () => {
-          this.showSuccessAlerte = true;
+          this.setProduct();
           console.log("confirmé");
         }
       }
@@ -40,5 +58,6 @@ export class VendeurAddproductPage implements OnInit {
     const { role } = await alert.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
   }
+
 
 }

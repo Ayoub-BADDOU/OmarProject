@@ -31,7 +31,8 @@ const routes: Routes = [
   {
     path: 'my-cart',
     loadChildren: () => import('./pages/my-cart/my-cart.module').then(m => m.MyCartPageModule),
-    canActivate: [AuthGardService]
+    canActivate: [AuthGardService],
+    runGuardsAndResolvers: 'always'
   },
   {
     path: 'logaccount',
@@ -99,6 +100,10 @@ const routes: Routes = [
     path: 'consommateur-points',
     loadChildren: () => import('./pages/consommateur-points/consommateur-points.module').then(m => m.ConsommateurPointsPageModule),
     canActivate: [AuthGardService]
+  },
+  {
+    path: 'consommateur-demandehistorique',
+    loadChildren: () => import('./pages/consommateur-demandehistorique/consommateur-demandehistorique.module').then(m => m.ConsommateurDemandehistoriquePageModule)
   },
 ];
 

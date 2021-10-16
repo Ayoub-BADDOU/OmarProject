@@ -16,4 +16,9 @@ export class UserService {
   login(data) {
     return this.http.post(this.Url + '/login', data)
   }
+
+  // for logcity
+  // getNumberUsersByRole(data) {
+  //   return this.http.post(this.Url + "/getNumberUsersByRole", data)
+  // }
 }

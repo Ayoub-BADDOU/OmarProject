@@ -75,8 +75,8 @@
     </ion-row> -->
 
     <ion-row style="margin-bottom: 20px !important;">
-      <ion-col size="6" *ngFor="let cat of categories" routerLink="/products">
-        <ion-card class="cssCard">
+      <ion-col size="6" *ngFor="let cat of categories">
+        <ion-card class="cssCard" [routerLink]="['/products', {id: cat.id}]">
           <div [style.background-image]="'url('+ cat.url +')'" class="cssImg"></div>
           <ion-card-header class="cssHeaderCard">
             <ion-card-title class="cssTitleCrd tajawal-Medium">{{cat.nom}}</ion-card-title>

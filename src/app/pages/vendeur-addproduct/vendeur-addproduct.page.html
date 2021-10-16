@@ -14,12 +14,13 @@
   <ion-grid class="ion-no-padding">
 
     <!-- Name -->
-    <form class="cssForm">
+    <form class="cssForm" [formGroup]="dataForm">
       <ion-row>
         <ion-col class="ion-no-padding">
           <div>
             <ion-label class="cssLabel tajawal-Bold">اسم المنتج</ion-label>
-            <ion-input placeholder="ضع إسم مناسب لمنتوجك الخاص" type="text" class="cssInput tajawal-Medium">
+            <ion-input placeholder="ضع إسم مناسب لمنتوجك الخاص" type="text" class="cssInput tajawal-Medium"
+              formControlName="nom">
             </ion-input>
           </div>
         </ion-col>
@@ -29,7 +30,8 @@
         <ion-col class="ion-no-padding">
           <div>
             <ion-label class="cssLabel tajawal-Bold">الثمن الأصلي</ion-label>
-            <ion-input placeholder="ضع ثمن المنتوج" type="text" class="cssInput tajawal-Medium">
+            <ion-input placeholder="ضع ثمن المنتوج" type="text" class="cssInput tajawal-Medium"
+              formControlName="prixInitial">
             </ion-input>
           </div>
         </ion-col>
@@ -37,7 +39,8 @@
         <ion-col class="ion-no-padding">
           <div>
             <ion-label class="cssLabel tajawal-Bold">ثمن التخفيض</ion-label>
-            <ion-input placeholder="ضع ثمن تخفيض المنتوج" type="text" class="cssInput tajawal-Medium">
+            <ion-input placeholder="ضع ثمن تخفيض المنتوج" type="text" class="cssInput tajawal-Medium"
+              formControlName="prixFinal">
             </ion-input>
           </div>
         </ion-col>
@@ -47,7 +50,7 @@
         <ion-col class="ion-no-padding">
           <div>
             <ion-label class="cssLabel tajawal-Bold">الفئات</ion-label>
-            <ion-input placeholder="إختر الفئة" type="text" class="cssInput tajawal-Medium">
+            <ion-input placeholder="إختر الفئة" type="text" class="cssInput tajawal-Medium" formControlName="category">
             </ion-input>
           </div>
         </ion-col>
@@ -55,7 +58,7 @@
         <ion-col class="ion-no-padding">
           <div>
             <ion-label class="cssLabel tajawal-Bold">المدن</ion-label>
-            <ion-input value="الرباط" type="text" class="cssInput tajawal-Medium">
+            <ion-input value="الرباط" type="text" class="cssInput tajawal-Medium" formControlName="ville">
             </ion-input>
           </div>
         </ion-col>
@@ -67,7 +70,8 @@
             <ion-label class="cssLabel tajawal-Bold">الوصف</ion-label>
             <!-- <ion-input placeholder="أضف وصف للمنتوج الخاص بك" type="text" class="cssInput tajawal-Medium">
             </ion-input> -->
-            <ion-textarea rows="3" cols="20" class="cssTextAera tajawal-Medium" placeholder="أضف وصف للمنتوج الخاص بك">
+            <ion-textarea rows="3" cols="20" class="cssTextAera tajawal-Medium" placeholder="أضف وصف للمنتوج الخاص بك"
+              formControlName="description">
             </ion-textarea>
           </div>
         </ion-col>
@@ -91,7 +95,7 @@
       <ion-row>
         <ion-col>
           <div style="margin: 16px 0px;">
-            <ion-button expand="block" class="tajawal-Bold" (click)="pushProduct()">نشر المنتج</ion-button>
+            <ion-button expand="block" class="tajawal-Bold" (click)="showAlert()">نشر المنتج</ion-button>
           </div>
         </ion-col>
       </ion-row>

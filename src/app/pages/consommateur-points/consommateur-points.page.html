@@ -21,16 +21,16 @@
     </div>
     <div class="cssHeight">
       <ion-row *ngFor="let d of data" class="cssTHead">
-        <ion-col size="6" class="ion-no-padding cssCenter cssValue">{{d.numCommande}}</ion-col>
-        <ion-col size="3" class="ion-no-padding cssCenter cssValue">{{d.date}}</ion-col>
-        <ion-col size="3" class="ion-no-padding cssCenter cssValue">{{d.point}}</ion-col>
+        <ion-col size="6" class="ion-no-padding cssCenter cssValue">{{d.codecommande}}</ion-col>
+        <ion-col size="3" class="ion-no-padding cssCenter cssValue">{{d.datecommande}}</ion-col>
+        <ion-col size="3" class="ion-no-padding cssCenter cssValue">{{d.pointtotal}}</ion-col>
       </ion-row>
     </div>
 
     <div class="cssFooter">
       <ion-row>
         <ion-col size="6" class="tajawal-Boldd cssValue">المجموع</ion-col>
-        <ion-col size="6" class="tajawal-Boldd cssValue"><span>980</span>نقطة</ion-col>
+        <ion-col size="6" class="tajawal-Boldd cssValue"><span>{{pointSomme}}</span>نقطة</ion-col>
       </ion-row>
     </div>
 
